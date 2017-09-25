@@ -1,0 +1,21 @@
+version: "2"
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:8080"
+      - "5858:5858"
+    command: npm run dev
+    links:
+      - rethink
+  rethink:
+    image: rethinkdb
+    ports:
+      - "29015:29015"
+      - "28015:28015"
+      - "8080:8080"
+    volumes:
+      - /data:/data
+    command: rethinkdb --bind all

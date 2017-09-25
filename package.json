@@ -1,0 +1,18 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Navarro Perez",
+  "license": "ISC",
+  "dependencies": {
+    "rethinkdb": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
